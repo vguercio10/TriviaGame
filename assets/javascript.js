@@ -43,6 +43,7 @@ let inccorectAnswers = 0;
 let notAnswered = 0;
 let answered;
 
+// Start button ---------------------------
 $("#startBtn").on("click", function(){
 	$(".btn").hide();
     // newGame();
@@ -50,15 +51,14 @@ $("#startBtn").on("click", function(){
     showQuestions();
 });   
 
-
+// Timer function-----------------
 function countDown() {
-    seconds = 5;
+    seconds = 15;
     $("#timeLeft").html("<h4>Countdown "  + seconds + "</h4>");
     answered = true;
     timer = setInterval(startCountdown, 1000);
 
-}
-//Once start button is clicked counter begins to count down (120 ish secs)
+// Scoreboard comes up after timer is 0
 function startCountdown() {
     seconds--;
     $("#timeLeft").html("<h4>Countdown " + seconds + "</h4>");
@@ -76,41 +76,28 @@ function endScoreboard() {
 
 
 }
-
+// Questions displayed on page
 function showQuestions() {
     for (var i = 0; i < questions.length; i++) {
         let question = $("<p>" + questions[i].question + "<br>");
         $("#triviaQuestions").append(question);
     }
-    
+// Answer and buttons dispayed on page (not working)
     for (j = 0; j < questions.answerChoices[j].length; j++) {
         $("<button>" + questions.answerChoices[j] + "<br>");
         answer.attr("data", answerChoices[j]).addClass("answer");
         $("#triviaQuestions").append(answer);
         console.log(answer);
     }
-  // $(".crystal").on('click', function() {
-  //   var crystalValue = Number(  $(this).attr("crystalValue")   );
-  //   console.log("The crystal has a value of", crystalValue);
-  //   userScore = userScore + crystalValue;
-  //   checkScore(userScore, computerNumber)
-  //   $("#Your-score").text("Your Score: " + userScore);
-  // })
+}
+  
 
 
-
-
-
-
-
-
-//Need a function that sorts and stores correct answers
-
-
-
+//Need a function that compares and stores answers
+// Scoreboard adjusts correct, inccorect and unaswered questions
 // When counter equals zero then the game ends and the follow is displayed
     // All DONE
     // Correct Answers:
     // Incorrect Ansers:
-    // Unanswered:
-    }
+    // Unanswered }
+}
