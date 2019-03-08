@@ -1,53 +1,5 @@
 
 console.log("hello");
- 
-// Variables
-let timer = 120;
-let correctAnswers = 0;
-let inccorectAnswers = 0;
-let notAnswered = 0;
-let answered;
-
-$("#startBtn").on("click", function(){
-	$(".btn").hide();
-    // newGame();
-    countDown();
-});   
-
-
-function countDown() {
-    seconds = 120;
-    $("#timeLeft").html("<h4>Countdown "  + seconds + "</h4>");
-    answered = true;
-    timer = setInterval(startCountdown, 1000);
-
-}
-
-function startCountdown() {
-    seconds--;
-    $("#timeLeft").html("<h4>Countdown " + seconds + "</h4>");
-        if(seconds < 1) {
-            clearInterval(timer);
-
-
-        }
-}
-
-
-
-
-
-
-
-
-
-
-
-//Once start button is clicked counter begins to count down (120 ish secs)
-
-
-
-
 //Object that contains trivia questions, answer choices, correct answers
 let questions = [
     {
@@ -80,6 +32,69 @@ let questions = [
     ]
     console.log(questions);
 
+
+// Variables
+let timer = 120;
+let correctAnswers = 0;
+let inccorectAnswers = 0;
+let notAnswered = 0;
+let answered;
+
+$("#startBtn").on("click", function(){
+	$(".btn").hide();
+    // newGame();
+    countDown();
+    showQuestions();
+});   
+
+
+function countDown() {
+    seconds = 5;
+    $("#timeLeft").html("<h4>Countdown "  + seconds + "</h4>");
+    answered = true;
+    timer = setInterval(startCountdown, 1000);
+
+}
+//Once start button is clicked counter begins to count down (120 ish secs)
+function startCountdown() {
+    seconds--;
+    $("#timeLeft").html("<h4>Countdown " + seconds + "</h4>");
+        if(seconds < 1) {
+            clearInterval(timer);
+            endScoreboard();
+            $("#timeLeft").hide()
+    }
+}
+function endScoreboard() {
+    $("#correctQs").html("<h5>Correct answers: " + correctAnswers + "</h5>");
+    $("#incorrectQs").html("<h5>Incorrect answers: " + inccorectAnswers + "</h5>");
+    $("#unAnswered").html("<h5> Unanswered questions: " + notAnswered + "</h5>");
+
+
+
+}
+
+function showQuestions() {
+    for (var i = 0; i < questions.length; i++) {
+        let question = $("<p>" + questions[i].question + "<br>");
+        $("#triviaQuestions").append(question);
+    }
+    
+    for (j = 0; j < questions[i].answerChoices.length; j++) {
+        let answer = $("<button>" + questions.answerChoices[j] + "<br>");
+        answerChoices.attr("data", questions[i].answerChoices[j]).addClass("answer");
+        $("#triviaQuestions").append(answer);
+        console.log(answer);
+
+}
+
+
+
+
+
+
+
+
 //Need a function that sorts and stores correct answers
 
 
@@ -89,3 +104,4 @@ let questions = [
     // Correct Answers:
     // Incorrect Ansers:
     // Unanswered:
+}
