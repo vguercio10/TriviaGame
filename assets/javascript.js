@@ -27,6 +27,9 @@ let questions = [
         question: "The Night King was created using a dagger made of...",
         answerChoices: ["Valyrian steel", "Blue ice", "Dragon glass", "Obsidian"],
         answer: 2,
+    },{
+        question: "Which of the following is related to the Stark Family?",
+        answerChoices: ["Renly Baratheon", "Jamie Lannister", "Sandor Clegane", "Jon Snow"],
     }
         
     ]
@@ -69,7 +72,7 @@ function endScoreboard() {
     $("#correctQs").html("<h5>Correct answers: " + correctAnswers + "</h5>");
     $("#incorrectQs").html("<h5>Incorrect answers: " + inccorectAnswers + "</h5>");
     $("#unAnswered").html("<h5> Unanswered questions: " + notAnswered + "</h5>");
-
+    $("#triviaQuestions").hide();
 
 
 }
@@ -80,13 +83,19 @@ function showQuestions() {
         $("#triviaQuestions").append(question);
     }
     
-    for (j = 0; j < questions[i].answerChoices.length; j++) {
-        let answer = $("<button>" + questions.answerChoices[j] + "<br>");
-        answerChoices.attr("data", questions[i].answerChoices[j]).addClass("answer");
+    for (j = 0; j < questions.answerChoices[j].length; j++) {
+        $("<button>" + questions.answerChoices[j] + "<br>");
+        answer.attr("data", answerChoices[j]).addClass("answer");
         $("#triviaQuestions").append(answer);
         console.log(answer);
-
-}
+    }
+  // $(".crystal").on('click', function() {
+  //   var crystalValue = Number(  $(this).attr("crystalValue")   );
+  //   console.log("The crystal has a value of", crystalValue);
+  //   userScore = userScore + crystalValue;
+  //   checkScore(userScore, computerNumber)
+  //   $("#Your-score").text("Your Score: " + userScore);
+  // })
 
 
 
@@ -104,4 +113,4 @@ function showQuestions() {
     // Correct Answers:
     // Incorrect Ansers:
     // Unanswered:
-}
+    }
