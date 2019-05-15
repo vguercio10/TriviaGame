@@ -46,6 +46,7 @@ let answered;
 
 // Start button ---------------------------
 $("#startBtn").on("click", function () {
+    event.preventDefault();
     $(".btn").hide();
     // newGame();
     countDown();

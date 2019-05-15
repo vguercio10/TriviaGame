@@ -7,15 +7,17 @@
   <title>Trivia Game</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Bootstrap CDN-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Google Fonts CDN -->
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+  <!--Stylesheet-->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
   <!--JQuery-->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
-
-  <link rel="stylesheet" type="text/css" src="assets/style.css">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
 
@@ -24,41 +26,47 @@
 <body>
 
   <div id="main-container">
-    <h1>TRIVIA GAME!</h1>
+    <h1>Game of Thrones Trivia</h1>
+    <br>
+    <h3>Press the start button to begin the game</h3>
+    <br>
     <div id="container">
       <button class='btn btn-primary' id="startBtn">Start</button>
-      
+
       <div id="timeLeft"></div>
+      <br>
 
-    <div id ="triviaQuestions"></div>
-
-    
-
-    <div id="correctQs"></div>
-
-    <div id="incorrectQs"></div>
-
-    <div id="unAnswered"></div>
-
-    <div id="scoreBoard"></div>
-
-    
+      <div id="triviaQuestions"></div>
+      <br>
 
 
-
-
-  </div>
+      <div id="correctQs"></div>
+      <br>
+      <div id="incorrectQs"></div>
+      <br>
+      <div id="unAnswered"></div>
+      <br>
+      <div id="scoreBoard"></div>
 
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script type="text/javascript" src="assets/javascript.js"></script>
+
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="assets/javascript.js"></script>
+
 
 
 </body>

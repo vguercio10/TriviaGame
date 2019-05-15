@@ -1,0 +1,21 @@
+body {
+    background: url("https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/episodes/8/key-art/got-s8-ka-1920x1080.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Berkshire Swash', cursive;
+    text-align: center;
+    font-size: large;
+    overflow: auto;
+
+
+}
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white
+}
