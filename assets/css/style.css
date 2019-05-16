@@ -18,6 +18,9 @@ body {
     justify-content: center;
     color: white
 }
+#gameSection {
+    font-size: large;
+}
 
 h1 {
     font-family: 'Berkshire Swash', cursive;
