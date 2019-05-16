@@ -6,7 +6,6 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
-    font-family: 'Berkshire Swash', cursive;
     text-align: center;
     font-size: large;
     overflow: auto;
@@ -18,4 +17,12 @@ body {
     align-items: center;
     justify-content: center;
     color: white
+}
+
+h1 {
+    font-family: 'Berkshire Swash', cursive;
+}
+
+h3 {
+    font-family: 'Berkshire Swash', cursive;
 }

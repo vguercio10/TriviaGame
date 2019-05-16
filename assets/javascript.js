@@ -55,7 +55,7 @@ $("#startBtn").on("click", function () {
 
 // Timer function/begins at the start of game-----------------
 function countDown() {
-    seconds = 10;
+    seconds = 30;
     $("#timeLeft").html("<h4>Countdown " + seconds + "</h4>");
     answered = true;
     timer = setInterval(startCountdown, 1000);
