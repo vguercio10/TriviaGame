@@ -37,14 +37,14 @@ let questions = [
 console.log(questions);
 
 
-// Variables
+// Global Variables
 let timer = 120;
 let correctAnswers = 0;
 let inccorectAnswers = 0;
 let notAnswered = questions.length;
 let answered;
 
-// Start button ---------------------------
+// Onclick event that begins game, displays trivia questions, displays countdown ---------------------------
 $("#startBtn").on("click", function () {
     event.preventDefault();
     $(".btn").hide();
@@ -53,7 +53,7 @@ $("#startBtn").on("click", function () {
     showQuestions();
 });
 
-// Timer function-----------------
+// Timer function/begins at the start of game-----------------
 function countDown() {
     seconds = 10;
     $("#timeLeft").html("<h4>Countdown " + seconds + "</h4>");
@@ -70,10 +70,14 @@ function startCountdown() {
         $("#timeLeft").hide()
     }
 }
+// Displays scores and questions not answered after timer runs down to 0
 function endScoreboard() {
     $("#correctQs").html("<h5>Correct answers: " + correctAnswers + "</h5>");
+    
     $("#incorrectQs").html("<h5>Incorrect answers: " + inccorectAnswers + "</h5>");
+   
     $("#unAnswered").html("<h5> Unanswered questions: " + notAnswered + "</h5>");
+  
     $("#triviaQuestions").hide();
 
 
@@ -99,7 +103,7 @@ function showQuestions() {
 
 
 }
-
+// On click the correct answer is compared to the user guess, keeps track if answer are correct or incorrect
 $(document).on("click", ".answer", function () {
     var userChoice = $(this).attr("data");
     var validAnswer = $(this).attr("validAnswer");
@@ -121,13 +125,6 @@ $(document).on("click", ".answer", function () {
 
 
 
-//Need a function that compares and stores answers
-// Scoreboard adjusts correct, inccorect and unaswered questions
-// When counter equals zero then the game ends and the follow is displayed
-    // All DONE
-    // Correct Answers:
-    // Incorrect Ansers:
-    // Unanswered 
 
-// Also, why is css not working ? }
+
 
