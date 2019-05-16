@@ -9,19 +9,7 @@ body {
     text-align: center;
     font-size: large;
     overflow: auto;
-
-
 }
-#container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white
-}
-#gameSection {
-    font-size: large;
-}
-
 h1 {
     font-family: 'Berkshire Swash', cursive;
 }
@@ -29,3 +17,15 @@ h1 {
 h3 {
     font-family: 'Berkshire Swash', cursive;
 }
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white
+}
+
+#gameSection {
+    font-size: large;
+}
+
